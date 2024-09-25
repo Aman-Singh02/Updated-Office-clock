@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<settings>
+    <TerminalIO>
+        <InputSource>1</InputSource>
+        <InputMode2>10</InputMode2>
+        <Filename>$PROJ_DIR$\TermIOInput.txt</Filename>
+        <InputEcho>1</InputEcho>
+        <ShowReset>0</ShowReset>
+        <InputEncodingICU>0</InputEncodingICU>
+        <OutputEncodingICU>0</OutputEncodingICU>
+    </TerminalIO>
+    <Stack>
+        <FillEnabled>0</FillEnabled>
+        <OverflowWarningsEnabled>1</OverflowWarningsEnabled>
+        <WarningThreshold>90</WarningThreshold>
+        <SpWarningsEnabled>1</SpWarningsEnabled>
+        <WarnLogOnly>1</WarnLogOnly>
+        <UseTrigger>1</UseTrigger>
+        <TriggerName>main</TriggerName>
+        <LimitSize>0</LimitSize>
+        <ByteLimit>50</ByteLimit>
+    </Stack>
+    <PlDriver>
+        <FirstRun>0</FirstRun>
+        <MemConfigValue>C:\Program Files\IAR Systems\Embedded Workbench 9.2_4\arm\config\debugger\ST\STM32G030C8.ddf</MemConfigValue>
+    </PlDriver>
+    <StLinkDriver>
+        <stlinkserialNo>2C25060029135147324D4E00</stlinkserialNo>
+        <stlinkfoundProbes />
+        <stlinkResetStyle>0</stlinkResetStyle>
+        <stlinkResetStrategy>0</stlinkResetStrategy>
+        <LeaveTargetRunning>_ 0</LeaveTargetRunning>
+        <CStepIntDis>_ 0</CStepIntDis>
+    </StLinkDriver>
+    <ArmDriver>
+        <EnableCache>0</EnableCache>
+        <EnforceMemoryConfiguration>1</EnforceMemoryConfiguration>
+    </ArmDriver>
+    <DebugChecksum>
+        <Checksum>2057938303</Checksum>
+    </DebugChecksum>
+    <Exceptions>
+        <StopOnUncaught>_ 0</StopOnUncaught>
+        <StopOnThrow>_ 0</StopOnThrow>
+    </Exceptions>
+    <Disassembly>
+        <MixedMode>1</MixedMode>
+    </Disassembly>
+    <Trace1>
+        <Enabled>0</Enabled>
+        <ShowSource>1</ShowSource>
+    </Trace1>
+    <CallStack>
+        <ShowArgs>0</ShowArgs>
+    </CallStack>
+    <array_types>
+        <Fmt0>int (const)[16]	3	0</Fmt0>
+        <Fmt1>unsigned char[6]	3	0</Fmt1>
+        <Fmt2>unsigned char[7]	3	0</Fmt2>
+    </array_types>
+    <watch_formats>
+        <Fmt0>{W}42:Address	4	0</Fmt0>
+        <Fmt1>{W}42:DISP_HH	3	0</Fmt1>
+        <Fmt2>{W}42:Data_In	3	0</Fmt2>
+        <Fmt3>{W}42:Disp_Counter	3	0</Fmt3>
+        <Fmt4>{W}42:DisplayData	1	0</Fmt4>
+        <Fmt5>{W}42:DutyCycle	3	0</Fmt5>
+        <Fmt6>{W}42:FlashAddress	4	0</Fmt6>
+        <Fmt7>{W}42:FlashData	1	0</Fmt7>
+        <Fmt8>{W}42:GPS_HH	3	0</Fmt8>
+        <Fmt9>{W}42:GPS_MM	3	0</Fmt9>
+        <Fmt10>{W}42:GPS_SS	3	0</Fmt10>
+        <Fmt11>{W}42:MST_HH	3	0</Fmt11>
+        <Fmt12>{W}42:MST_MM	3	0</Fmt12>
+        <Fmt13>{W}42:MST_SS	3	0</Fmt13>
+        <Fmt14>{W}42:NextDigit	3	0</Fmt14>
+        <Fmt15>{W}42:NightInt_self	3	0</Fmt15>
+        <Fmt16>{W}42:SegMult	1	0</Fmt16>
+    </watch_formats>
+    <Trace2>
+        <Enabled>0</Enabled>
+        <ShowSource>0</ShowSource>
+    </Trace2>
+    <TermIOLog>
+        <LoggingEnabled>_ 0</LoggingEnabled>
+        <LogFile>_ ""</LogFile>
+    </TermIOLog>
+    <DisassembleMode>
+        <mode>0</mode>
+    </DisassembleMode>
+    <Breakpoints2>
+        <Bp0>_ 0 "EMUL_CODE" "" 0 0 1 "" 0 "" 0</Bp0>
+        <Bp1>_ 0 "EMUL_CODE" "" 0 0 1 "" 0 "" 0</Bp1>
+        <Bp2>_ 0 "EMUL_CODE" "" 0 0 1 "" 0 "" 0</Bp2>
+        <Bp3>_ 0 "EMUL_CODE" "" 0 0 1 "" 0 "" 0</Bp3>
+        <Count>4</Count>
+    </Breakpoints2>
+    <Aliases>
+        <Count>0</Count>
+        <SuppressDialog>0</SuppressDialog>
+    </Aliases>
+</settings>
