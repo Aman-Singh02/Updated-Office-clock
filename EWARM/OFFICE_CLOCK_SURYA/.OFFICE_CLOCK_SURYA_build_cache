@@ -3,9 +3,9 @@
     <Tool>
         <Name>linker</Name>
         <Parent>
-            <Path>C:\Users\HP\Documents\checking\New folder\OFFICE_CLOCK_SURYA_[Final]\OFFICE_CLOCK_SURYA_[Final]\OFFICE_CLOCK_SURYA\EWARM\OFFICE_CLOCK_SURYA\Exe\OFFICE_CLOCK_SURYA.out</Path>
+            <Path>C:\Users\HP\Documents\checking\validation(9600)\OFFICE_CLOCK_SURYA\EWARM\OFFICE_CLOCK_SURYA\Exe\OFFICE_CLOCK_SURYA.out</Path>
             <Output>
-                <Path>C:\Users\HP\Documents\checking\New folder\OFFICE_CLOCK_SURYA_[Final]\OFFICE_CLOCK_SURYA_[Final]\OFFICE_CLOCK_SURYA\EWARM\OFFICE_CLOCK_SURYA\List\OFFICE_CLOCK_SURYA.map</Path>
+                <Path>C:\Users\HP\Documents\checking\validation(9600)\OFFICE_CLOCK_SURYA\EWARM\OFFICE_CLOCK_SURYA\List\OFFICE_CLOCK_SURYA.map</Path>
             </Output>
         </Parent>
     </Tool>

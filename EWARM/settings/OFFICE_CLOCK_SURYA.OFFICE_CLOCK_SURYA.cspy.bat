@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 9.2_4\common\bin\cspybat" -f "C:\Users\HP\Desktop\Task\Project\PROJECT_Assign(Clock)\Office_clk_Final\OFFICE_CLOCK_FINAL_Submission\24-09sep\OFFICE_CLOCK_SURYA_[Final]\OFFICE_CLOCK_SURYA_[Final]\OFFICE_CLOCK_SURYA\EWARM\settings\OFFICE_CLOCK_SURYA.OFFICE_CLOCK_SURYA.general.xcl" --backend -f "C:\Users\HP\Desktop\Task\Project\PROJECT_Assign(Clock)\Office_clk_Final\OFFICE_CLOCK_FINAL_Submission\24-09sep\OFFICE_CLOCK_SURYA_[Final]\OFFICE_CLOCK_SURYA_[Final]\OFFICE_CLOCK_SURYA\EWARM\settings\OFFICE_CLOCK_SURYA.OFFICE_CLOCK_SURYA.driver.xcl" 
+"C:\Program Files\IAR Systems\Embedded Workbench 9.2_4\common\bin\cspybat" -f "C:\Users\HP\Documents\checking\validation(9600)\OFFICE_CLOCK_SURYA\EWARM\settings\OFFICE_CLOCK_SURYA.OFFICE_CLOCK_SURYA.general.xcl" --backend -f "C:\Users\HP\Documents\checking\validation(9600)\OFFICE_CLOCK_SURYA\EWARM\settings\OFFICE_CLOCK_SURYA.OFFICE_CLOCK_SURYA.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 9.2_4\common\bin\cspybat" -f "C:\Users\HP\Desktop\Task\Project\PROJECT_Assign(Clock)\Office_clk_Final\OFFICE_CLOCK_FINAL_Submission\24-09sep\OFFICE_CLOCK_SURYA_[Final]\OFFICE_CLOCK_SURYA_[Final]\OFFICE_CLOCK_SURYA\EWARM\settings\OFFICE_CLOCK_SURYA.OFFICE_CLOCK_SURYA.general.xcl" "--debug_file=%~1" --backend -f "C:\Users\HP\Desktop\Task\Project\PROJECT_Assign(Clock)\Office_clk_Final\OFFICE_CLOCK_FINAL_Submission\24-09sep\OFFICE_CLOCK_SURYA_[Final]\OFFICE_CLOCK_SURYA_[Final]\OFFICE_CLOCK_SURYA\EWARM\settings\OFFICE_CLOCK_SURYA.OFFICE_CLOCK_SURYA.driver.xcl" 
+"C:\Program Files\IAR Systems\Embedded Workbench 9.2_4\common\bin\cspybat" -f "C:\Users\HP\Documents\checking\validation(9600)\OFFICE_CLOCK_SURYA\EWARM\settings\OFFICE_CLOCK_SURYA.OFFICE_CLOCK_SURYA.general.xcl" "--debug_file=%~1" --backend -f "C:\Users\HP\Documents\checking\validation(9600)\OFFICE_CLOCK_SURYA\EWARM\settings\OFFICE_CLOCK_SURYA.OFFICE_CLOCK_SURYA.driver.xcl" 
 
 @echo off 
 :end

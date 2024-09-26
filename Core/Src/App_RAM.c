@@ -8,6 +8,7 @@
 RTC_DateTypeDef gDate; 
 RTC_TimeTypeDef gTime;
 
+
 /***********************************
  Display Segments
      F

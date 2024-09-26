@@ -18,9 +18,6 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "tim.h"
-#include "usart.h"
-#include "gpio.h"
 
 /* prototype */
 void SystemClock_Config(void);
@@ -35,7 +32,8 @@ int main(void)
     if(Flag_Second)                                                             /* General Purpose Timer for timing event*/
     { 
       Flag_Second = RESET;                                                      /* Reset Flag*/
-      GP_Timer();                                                               /* Every Second Activity*/               
+      GP_Timer();                                                               /* Every Second Activity*/  
+   
     }; 
     if(Flag_DataReady == SET){                                                  /*/ Processign Recieved Data*/
       Flag_Communication = SET;
@@ -50,6 +48,7 @@ int main(void)
     
     /* Scan Display */
     Scan_Display();
+    LL_IWDG_ReloadCounter(IWDG);
     
   }; // End of Infinite Loop
 }
@@ -66,6 +65,8 @@ void SYSTEM_INIT(void)
   //MX_USART1_UART_Init();
   MX_USART2_UART_Init();                                                        //Intialization of USART 2
   MX_TIM3_Init();                                                               //Intialization of Timer
+  
+  MX_IWDG_Init();
 }
 /**
   * @brief System Clock Configuration

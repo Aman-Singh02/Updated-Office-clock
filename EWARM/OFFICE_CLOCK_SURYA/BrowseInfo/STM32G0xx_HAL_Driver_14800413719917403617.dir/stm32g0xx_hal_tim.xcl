@@ -1,25 +1,25 @@
-"C:\Users\HP\Documents\checking\New folder\OFFICE_CLOCK_SURYA_[Final]\OFFICE_CLOCK_SURYA_[Final]\OFFICE_CLOCK_SURYA\Drivers\STM32G0xx_HAL_Driver\Src\stm32g0xx_hal_tim.c"
+"C:\Users\HP\Documents\checking\validation(9600)\OFFICE_CLOCK_SURYA\Drivers\STM32G0xx_HAL_Driver\Src\stm32g0xx_hal_tim.c"
 -std=c11
 -ferror-limit=0
 -fbracket-depth=512
 -funsigned-char
 -MD
 -MF
-C:\Users\HP\Documents\checking\New folder\OFFICE_CLOCK_SURYA_[Final]\OFFICE_CLOCK_SURYA_[Final]\OFFICE_CLOCK_SURYA\EWARM\OFFICE_CLOCK_SURYA\BrowseInfo\STM32G0xx_HAL_Driver_14800413719917403617.dir\stm32g0xx_hal_tim.pbi.dep
+C:\Users\HP\Documents\checking\validation(9600)\OFFICE_CLOCK_SURYA\EWARM\OFFICE_CLOCK_SURYA\BrowseInfo\STM32G0xx_HAL_Driver_14800413719917403617.dir\stm32g0xx_hal_tim.pbi.dep
 -o
-C:\Users\HP\Documents\checking\New folder\OFFICE_CLOCK_SURYA_[Final]\OFFICE_CLOCK_SURYA_[Final]\OFFICE_CLOCK_SURYA\EWARM\OFFICE_CLOCK_SURYA\BrowseInfo\STM32G0xx_HAL_Driver_14800413719917403617.dir\stm32g0xx_hal_tim.pbi
+C:\Users\HP\Documents\checking\validation(9600)\OFFICE_CLOCK_SURYA\EWARM\OFFICE_CLOCK_SURYA\BrowseInfo\STM32G0xx_HAL_Driver_14800413719917403617.dir\stm32g0xx_hal_tim.pbi
 -I
-C:\Users\HP\Documents\checking\New folder\OFFICE_CLOCK_SURYA_[Final]\OFFICE_CLOCK_SURYA_[Final]\OFFICE_CLOCK_SURYA\Drivers\STM32G0xx_HAL_Driver\Src
+C:\Users\HP\Documents\checking\validation(9600)\OFFICE_CLOCK_SURYA\Drivers\STM32G0xx_HAL_Driver\Src
 -I
-C:\Users\HP\Documents\checking\New folder\OFFICE_CLOCK_SURYA_[Final]\OFFICE_CLOCK_SURYA_[Final]\OFFICE_CLOCK_SURYA\EWARM/../Core/Inc\
+C:\Users\HP\Documents\checking\validation(9600)\OFFICE_CLOCK_SURYA\EWARM/../Core/Inc
 -I
-C:\Users\HP\Documents\checking\New folder\OFFICE_CLOCK_SURYA_[Final]\OFFICE_CLOCK_SURYA_[Final]\OFFICE_CLOCK_SURYA\EWARM/../Drivers/STM32G0xx_HAL_Driver/Inc\
+C:\Users\HP\Documents\checking\validation(9600)\OFFICE_CLOCK_SURYA\EWARM/../Drivers/STM32G0xx_HAL_Driver/Inc
 -I
-C:\Users\HP\Documents\checking\New folder\OFFICE_CLOCK_SURYA_[Final]\OFFICE_CLOCK_SURYA_[Final]\OFFICE_CLOCK_SURYA\EWARM/../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy\
+C:\Users\HP\Documents\checking\validation(9600)\OFFICE_CLOCK_SURYA\EWARM/../Drivers/STM32G0xx_HAL_Driver/Inc/Legacy
 -I
-C:\Users\HP\Documents\checking\New folder\OFFICE_CLOCK_SURYA_[Final]\OFFICE_CLOCK_SURYA_[Final]\OFFICE_CLOCK_SURYA\EWARM/../Drivers/CMSIS/Device/ST/STM32G0xx/Include\
+C:\Users\HP\Documents\checking\validation(9600)\OFFICE_CLOCK_SURYA\EWARM/../Drivers/CMSIS/Device/ST/STM32G0xx/Include
 -I
-C:\Users\HP\Documents\checking\New folder\OFFICE_CLOCK_SURYA_[Final]\OFFICE_CLOCK_SURYA_[Final]\OFFICE_CLOCK_SURYA\EWARM/../Drivers/CMSIS/Include\
+C:\Users\HP\Documents\checking\validation(9600)\OFFICE_CLOCK_SURYA\EWARM/../Drivers/CMSIS/Include
 -I
 C:\Program Files\IAR Systems\Embedded Workbench 9.2_4\arm\inc\c\aarch32
 -I
@@ -27,15 +27,15 @@ C:\Program Files\IAR Systems\Embedded Workbench 9.2_4\arm\inc
 -I
 C:\Program Files\IAR Systems\Embedded Workbench 9.2_4\arm\inc\c
 -I
-C:\Users\HP\Documents\checking\New folder\OFFICE_CLOCK_SURYA_[Final]\OFFICE_CLOCK_SURYA_[Final]\OFFICE_CLOCK_SURYA\Core\Inc
+C:\Users\HP\Documents\checking\validation(9600)\OFFICE_CLOCK_SURYA\Core\Inc
 -I
-C:\Users\HP\Documents\checking\New folder\OFFICE_CLOCK_SURYA_[Final]\OFFICE_CLOCK_SURYA_[Final]\OFFICE_CLOCK_SURYA\Drivers\STM32G0xx_HAL_Driver\Inc
+C:\Users\HP\Documents\checking\validation(9600)\OFFICE_CLOCK_SURYA\Drivers\STM32G0xx_HAL_Driver\Inc
 -I
-C:\Users\HP\Documents\checking\New folder\OFFICE_CLOCK_SURYA_[Final]\OFFICE_CLOCK_SURYA_[Final]\OFFICE_CLOCK_SURYA\Drivers\STM32G0xx_HAL_Driver\Inc\Legacy
+C:\Users\HP\Documents\checking\validation(9600)\OFFICE_CLOCK_SURYA\Drivers\STM32G0xx_HAL_Driver\Inc\Legacy
 -I
-C:\Users\HP\Documents\checking\New folder\OFFICE_CLOCK_SURYA_[Final]\OFFICE_CLOCK_SURYA_[Final]\OFFICE_CLOCK_SURYA\Drivers\CMSIS\Device\ST\STM32G0xx\Include
+C:\Users\HP\Documents\checking\validation(9600)\OFFICE_CLOCK_SURYA\Drivers\CMSIS\Device\ST\STM32G0xx\Include
 -I
-C:\Users\HP\Documents\checking\New folder\OFFICE_CLOCK_SURYA_[Final]\OFFICE_CLOCK_SURYA_[Final]\OFFICE_CLOCK_SURYA\Drivers\CMSIS\Include
+C:\Users\HP\Documents\checking\validation(9600)\OFFICE_CLOCK_SURYA\Drivers\CMSIS\Include
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0

@@ -39,6 +39,7 @@ extern "C" {
 #include "stm32g0xx_ll_dma.h"
 #include "stm32g0xx_ll_usart.h"
 #include "stm32g0xx_ll_gpio.h"
+#include "stm32g0xx_ll_iwdg.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -53,6 +54,10 @@ extern "C" {
 #include <stdio.h>
 #include <string.h>
 #include "rtc.h"
+#include "usart.h"
+#include "tim.h"
+#include "gpio.h"
+#include "iwdg.h"  
 //#include "App_Include.h"
 /* USER CODE END Includes */
 #define Flash_ADD 0x800ff00
