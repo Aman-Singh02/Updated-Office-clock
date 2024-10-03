@@ -71,7 +71,7 @@ void MX_USART1_UART_Init(void)
 
   /* USER CODE END USART1_Init 1 */
   USART_InitStruct.PrescalerValue = LL_USART_PRESCALER_DIV1;
-  USART_InitStruct.BaudRate = 9600;                                             //Changed from 115200 to 9600
+  USART_InitStruct.BaudRate = 115200;                                             //Changed from 115200 to 9600-> //Changed from 115200 to 9600-> reverse this order bcz in that we just cheked changing or not
   USART_InitStruct.DataWidth = LL_USART_DATAWIDTH_8B;
   USART_InitStruct.StopBits = LL_USART_STOPBITS_1;
   USART_InitStruct.Parity = LL_USART_PARITY_NONE;
@@ -138,7 +138,8 @@ void MX_USART2_UART_Init(void)
 
   /* USER CODE END USART2_Init 1 */
   USART_InitStruct.PrescalerValue = LL_USART_PRESCALER_DIV1;
-  USART_InitStruct.BaudRate = 9600;                                             //Changed from 115200 to 9600
+  USART_InitStruct.BaudRate = 115200;                                             //Changed from 115200 to 9600-> reverse this order bcz in that we just cheked changing or not
+  
   USART_InitStruct.DataWidth = LL_USART_DATAWIDTH_8B;
   USART_InitStruct.StopBits = LL_USART_STOPBITS_1;
   USART_InitStruct.Parity = LL_USART_PARITY_NONE;
