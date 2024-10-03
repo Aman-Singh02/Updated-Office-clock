@@ -3,9 +3,15 @@
     <Tool>
         <Name>linker</Name>
         <Parent>
-            <Path>C:\Users\HP\Documents\checking\validation(9600)\OFFICE_CLOCK_SURYA\EWARM\OFFICE_CLOCK_SURYA\Exe\OFFICE_CLOCK_SURYA.out</Path>
+            <Path>C:\Users\HP\Documents\checking\validation(9600)\New_Change\OFFICE_CLOCK_SURYA\EWARM\OFFICE_CLOCK_SURYA\Exe\OFFICE_CLOCK_SURYA.out</Path>
             <Output>
-                <Path>C:\Users\HP\Documents\checking\validation(9600)\OFFICE_CLOCK_SURYA\EWARM\OFFICE_CLOCK_SURYA\List\OFFICE_CLOCK_SURYA.map</Path>
+                <Path>C:\Users\HP\Documents\checking\validation(9600)\New_Change\OFFICE_CLOCK_SURYA\EWARM\OFFICE_CLOCK_SURYA\List\OFFICE_CLOCK_SURYA.map</Path>
+            </Output>
+        </Parent>
+        <Parent>
+            <Path>C:\Users\HP\Desktop\Office_Clock\Updated code\OFFICE_CLOCK_SURYA\OFFICE_CLOCK_SURYA\EWARM\OFFICE_CLOCK_SURYA\Exe\OFFICE_CLOCK_SURYA.out</Path>
+            <Output>
+                <Path>C:\Users\HP\Desktop\Office_Clock\Updated code\OFFICE_CLOCK_SURYA\OFFICE_CLOCK_SURYA\EWARM\OFFICE_CLOCK_SURYA\List\OFFICE_CLOCK_SURYA.map</Path>
             </Output>
         </Parent>
     </Tool>

@@ -111,19 +111,17 @@ void Get_Time(void)
     MST_MM = Read_RTC(RTC_MM_REG);
     MST_HH = Read_RTC(RTC_HH_REG);
 
-
-
-  if(Flag_1224 == SET && (MST_HH > 12))DISP_HH = MST_HH-12;
+  if(Flag_1224 == SET && (MST_HH > 12))DISP_HH = MST_HH-12;                     //If 12/24 is pressed then convert 24 -> 12 Format
     else DISP_HH = MST_HH;
 
-  Display_RAM[0] = DISP_HH/10;
-  Display_RAM[1] = DISP_HH%10
+  Display_RAM[0] = DISP_HH/10;                                                  //Display the HH - TENS
+  Display_RAM[1] = DISP_HH%10                                                   //Display the HH - Ones
     ;
-  Display_RAM[2] = MST_MM/10;
-  Display_RAM[3] = MST_MM%10;
+  Display_RAM[2] = MST_MM/10;                                                   //Display the MM - TENS
+  Display_RAM[3] = MST_MM%10;                                                   //Display the MM  Ones
   
-  Display_RAM[4] = MST_SS/10;
-  Display_RAM[5] = MST_SS%10;
+  Display_RAM[4] = MST_SS/10;                                                   //Display the SS - TENS
+  Display_RAM[5] = MST_SS%10;                                                   //Display the SS - Ones
 
   Old_SS = MST_SS;
  };

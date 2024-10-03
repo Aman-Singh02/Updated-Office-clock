@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "C:\Program Files\IAR Systems\Embedded Workbench 9.2_4\common\bin\cspybat" -f "C:\Users\HP\Documents\checking\validation(9600)\OFFICE_CLOCK_SURYA\EWARM\settings\OFFICE_CLOCK_SURYA.OFFICE_CLOCK_SURYA.general.xcl" --backend -f "C:\Users\HP\Documents\checking\validation(9600)\OFFICE_CLOCK_SURYA\EWARM\settings\OFFICE_CLOCK_SURYA.OFFICE_CLOCK_SURYA.driver.xcl" 
+& "C:\Program Files\IAR Systems\Embedded Workbench 9.2_4\common\bin\cspybat" -f "C:\Users\HP\Desktop\Office_Clock\Updated code\OFFICE_CLOCK_SURYA\OFFICE_CLOCK_SURYA\EWARM\settings\OFFICE_CLOCK_SURYA.OFFICE_CLOCK_SURYA.general.xcl" --backend -f "C:\Users\HP\Desktop\Office_Clock\Updated code\OFFICE_CLOCK_SURYA\OFFICE_CLOCK_SURYA\EWARM\settings\OFFICE_CLOCK_SURYA.OFFICE_CLOCK_SURYA.driver.xcl" 
 }
 else
 {
-& "C:\Program Files\IAR Systems\Embedded Workbench 9.2_4\common\bin\cspybat" -f "C:\Users\HP\Documents\checking\validation(9600)\OFFICE_CLOCK_SURYA\EWARM\settings\OFFICE_CLOCK_SURYA.OFFICE_CLOCK_SURYA.general.xcl" --debug_file=$debugfile --backend -f "C:\Users\HP\Documents\checking\validation(9600)\OFFICE_CLOCK_SURYA\EWARM\settings\OFFICE_CLOCK_SURYA.OFFICE_CLOCK_SURYA.driver.xcl" 
+& "C:\Program Files\IAR Systems\Embedded Workbench 9.2_4\common\bin\cspybat" -f "C:\Users\HP\Desktop\Office_Clock\Updated code\OFFICE_CLOCK_SURYA\OFFICE_CLOCK_SURYA\EWARM\settings\OFFICE_CLOCK_SURYA.OFFICE_CLOCK_SURYA.general.xcl" --debug_file=$debugfile --backend -f "C:\Users\HP\Desktop\Office_Clock\Updated code\OFFICE_CLOCK_SURYA\OFFICE_CLOCK_SURYA\EWARM\settings\OFFICE_CLOCK_SURYA.OFFICE_CLOCK_SURYA.driver.xcl" 
 }

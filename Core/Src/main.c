@@ -33,9 +33,11 @@ int main(void)
     { 
       Flag_Second = RESET;                                                      /* Reset Flag*/
       GP_Timer();                                                               /* Every Second Activity*/  
-   
-    }; 
-    if(Flag_DataReady == SET){                                                  /*/ Processign Recieved Data*/
+      
+    };
+    
+    if(Flag_DataReady == SET)
+    {                                                                           /*/ Processign Recieved Data*/
       Flag_Communication = SET;
       Comm_TimeOut = 5;
       Flag_DataReady = RESET;				                        // Reset Flag
@@ -48,7 +50,7 @@ int main(void)
     
     /* Scan Display */
     Scan_Display();
-    LL_IWDG_ReloadCounter(IWDG);
+    LL_IWDG_ReloadCounter(IWDG);                                                // Reloading the Watch Dog Timer
     
   }; // End of Infinite Loop
 }
@@ -58,15 +60,15 @@ void SYSTEM_INIT(void)
 {
   HAL_Init();                                                                   //Intialization of all pheripheral
   SystemClock_Config();                                                         //Intialization the system clock
+  MX_IWDG_Init();                                                               //Intialization of Timer
   MX_GPIO_Init();                                                               //Intialization of GPIO
   INIT_SW_I2C();
   INIT_RTC();                                                                   //Intialization of External RTC
   MX_RTC_Init();                                                                //Intialization of Internal RTC
-  //MX_USART1_UART_Init();
+  //MX_USART1_UART_Init();                                                      //Intialization of USART 1
   MX_USART2_UART_Init();                                                        //Intialization of USART 2
   MX_TIM3_Init();                                                               //Intialization of Timer
   
-  MX_IWDG_Init();
 }
 /**
   * @brief System Clock Configuration

@@ -4,11 +4,8 @@
 /*******************************************************************************
  * Function Name: Delay_100us
  * Parameters: Int32U Dly
- *
  * Return: none
- *
  * Description: Delay Dly * 10us
- *
  ******************************************************************************/
 
 void Delay_1us(unsigned int Dly)
@@ -22,11 +19,8 @@ void Delay_1us(unsigned int Dly)
 /*******************************************************************************
  * Function Name: INIT_SW_I2C
  * Parameters: none
- *
  * Return: none
- *
  * Description: Initialize Software I2C Pins
- *
  ******************************************************************************/
 
 void INIT_SW_I2C(void)
@@ -53,16 +47,11 @@ SET_SDA;
 SET_SCL;
  }
 
-
-
 /*******************************************************************************
  * Function Name: I2C Start
  * Parameters: none
- *
  * Return: none
- *
  * Description: Generate Start Sequence for I2C Pins
- *
  ******************************************************************************/
 
 void I2C_START(void)
@@ -78,12 +67,9 @@ void I2C_START(void)
 
 /*******************************************************************************
  * Function Name: I2C STOP
- * Parameters: none
- *
- * Return: none
- *
- * Description: Generate STOP Sequence for I2C Pins
- *
+ * Parameters: n
+ * Return: n
+ * Description: Generate STOP Sequence for I2C P
  ******************************************************************************/
 
 void I2C_STOP(void)
@@ -99,11 +85,8 @@ void I2C_STOP(void)
 /*******************************************************************************
  * Function Name: I2C_ACK
  * Parameters: none
- *
  * Return: none
- *
  * Description: Generate Acknowledge Sequence for I2C Pins
- *
  ******************************************************************************/
 
 void I2C_ACK(void)
@@ -118,11 +101,8 @@ void I2C_ACK(void)
 /*******************************************************************************
  * Function Name: Serial_Out
  * Parameters: Data to be output
- *
  * Return: none
- *
  * Description: Send Data over I2C Pins
- *
  ******************************************************************************/
 
 void Serial_Out(unsigned char Dat_Out)
@@ -147,11 +127,8 @@ for(Clk = 0;Clk<=7; Clk++)
 /*************************************************************************
  * Function Name: Serial_In
  * Parameters: None
- *
  * Return: Data Recieved
- *
  * Description: Recieve Data over I2C Pins
- *
  *************************************************************************/
 
 unsigned char Serial_In(void)

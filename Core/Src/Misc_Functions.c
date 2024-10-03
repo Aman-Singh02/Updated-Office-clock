@@ -12,44 +12,41 @@ static uint32_t GetBank(uint32_t Addr);
 unsigned char Key_Scan(void)
 {
   unsigned char key_press = 0;
-  // Keys for Single Press
-  if(LL_GPIO_IsInputPinSet(PORT_KPRG,KEY_PRG) == RESET && Key.PRG == RESET && Flag_KeyPrg == RESET)
+   /*-------------------------------------Keys for Single Press--------------------------------------------*/
+  if(LL_GPIO_IsInputPinSet(PORT_KPRG,KEY_PRG) == RESET && Key.PRG == RESET && Flag_KeyPrg == RESET)                     //Checking the PRG key is pressed or not
   {
     Flag_KeyPrg = SET;
     Key.PRG = SET;
     key_press = PRG_KEY;
-    
   };
   if(LL_GPIO_IsInputPinSet(PORT_KPRG,KEY_PRG) == SET)Flag_KeyPrg = RESET;
   
-  if(LL_GPIO_IsInputPinSet(K12_24_GPIO_Port,K12_24_Pin) == RESET && Key.K1224 == RESET && Flag_Key1224 == RESET)
+  if(LL_GPIO_IsInputPinSet(K12_24_GPIO_Port,K12_24_Pin) == RESET && Key.K1224 == RESET && Flag_Key1224 == RESET)        //Checking the 12/24 key is pressed or not
   {
     Flag_Key1224 = SET;
     Key.K1224 = SET;
-    key_press = K1224_KEY;
-    
+    key_press = K1224_KEY; 
   };
   if(LL_GPIO_IsInputPinSet(K12_24_GPIO_Port,K12_24_Pin) == SET)Flag_Key1224 = RESET;
   
-  // Keys for Multi Press
-  if(LL_GPIO_IsInputPinSet(PORT_KINC,KEY_INC) == RESET && Key.INC == RESET)
+  /*-------------------------------------Keys for Multi Press--------------------------------------------*/
+  
+  if(LL_GPIO_IsInputPinSet(PORT_KINC,KEY_INC) == RESET && Key.INC == RESET)                                             //Checking the Increament key is pressed or not
   {
     Key.INC = SET;
     key_press = INC_KEY;  
   }
   
-  else if(LL_GPIO_IsInputPinSet(PORT_KDEC,KEY_DEC) == RESET && Key.DEC == 0)
+  else if(LL_GPIO_IsInputPinSet(PORT_KDEC,KEY_DEC) == RESET && Key.DEC == 0)                                            //Checking the Decrement key is pressed or not
   {
     Key.DEC = SET;
-    key_press = DEC_KEY;
-    
+    key_press = DEC_KEY;   
   }
   
-  else if(LL_GPIO_IsInputPinSet(PORT_KINT,KEY_INT) == RESET && Key.INT == 0)
+  else if(LL_GPIO_IsInputPinSet(PORT_KINT,KEY_INT) == RESET && Key.INT == 0)                                            //Checking the Intensity key is pressed or not
   {
     Key.INT = SET;
     key_press = INT_KEY;
-    
   };
   return(key_press);
   
@@ -83,12 +80,12 @@ void Program_Mode(void)
   else {RST_RED;SET_GRN;};
   switch (Prog_State)
    {
-    case HOUR : switch(Key_Entry)
+    case HOUR : switch(Key_Entry)                                               //When PRG Pressed <Change sin the Hour>:
                  {
-                  case INC_KEY : Key_Entry = NONE; PRG_HH++;
+                  case INC_KEY : Key_Entry = NONE; PRG_HH++;                    // For +1 in the given time
 		                 if(PRG_HH > 23)PRG_HH = 0;
 		                 break;
-		  case DEC_KEY : Key_Entry = NONE; PRG_HH--;
+		  case DEC_KEY : Key_Entry = NONE; PRG_HH--;                    // For -1 in the given time
 		                 if(PRG_HH > 23)PRG_HH = 23;
 		                 break;
                   case PRG_KEY : Key_Entry = NONE;Prog_State = MIN;
@@ -105,12 +102,12 @@ void Program_Mode(void)
                  Display_RAM[0] = PRG_HH/10;Display_RAM[1] = PRG_HH%10;
 		 Display_RAM[2] = Display_RAM[3] = BLANK;
                  break;
-     case MIN : switch(Key_Entry)
+     case MIN : switch(Key_Entry)                                               //When PRG Pressed <Change sin the Minutes>:                                            
                  {
-                  case INC_KEY : Key_Entry = NONE; PRG_MM++;
+                  case INC_KEY : Key_Entry = NONE; PRG_MM++;                    // For +1 in the given time
 		                 if(PRG_MM > 59)PRG_MM = 0;
 		                 break;
-		  case DEC_KEY : Key_Entry = NONE; PRG_MM--;
+		  case DEC_KEY : Key_Entry = NONE; PRG_MM--;                    // For -1 in the given time
 		                 if(PRG_MM > 59)PRG_MM = 59;
 		                 break;
                   case PRG_KEY : Key_Entry = NONE;Prog_State = HOLD;
@@ -306,9 +303,9 @@ void GP_Timer(void)
      {
       Flag_GPSDataReady = RESET;
 
-      GPS_HH = (GPS_DataIn[0]  -'0')*10 + GPS_DataIn[1] - '0';
-      GPS_MM = (GPS_DataIn[2] - '0')*10 + GPS_DataIn[3] - '0';
-      GPS_SS = (GPS_DataIn[4] - '0')*10 + GPS_DataIn[5] - '0';
+      GPS_HH = (GPS_DataIn[0]  -'0')*10 + GPS_DataIn[1] - '0';                  //Extracted the time from the NMEA string for GPS HH
+      GPS_MM = (GPS_DataIn[2] - '0')*10 + GPS_DataIn[3] - '0';                  //Extracted the time from the NMEA string for GPS MM
+      GPS_SS = (GPS_DataIn[4] - '0')*10 + GPS_DataIn[5] - '0';                  //Extracted the time from the NMEA string for GPS SS
       
            if((Flag_1224_Com == RESET) && (Rcv_DataIn[6] == 'U')){Flag_1224_Com = SET;   Save_Time = 5;}
       else if((Flag_1224_Com ==   SET) && (Rcv_DataIn[6] != 'U')){Flag_1224_Com = RESET; Save_Time = 5;}
@@ -316,14 +313,14 @@ void GP_Timer(void)
       /* Formating Time in india standard */
        if (GPS_HH < 24 && GPS_MM < 60)
 	{
-	 GPS_HH += 5;GPS_MM += 30;                                              /* adding 5:30 in GPS time */
-         if(GPS_MM > 59){GPS_MM -= 60;GPS_HH++;};                               /* maintening minute       */                   
-         if(GPS_HH > 23)GPS_HH -= 24;                                           /* maintening hour         */
+	 GPS_HH += 5;GPS_MM += 30;                                                /* adding 5:30 in GPS time */
+         if(GPS_MM > 59){GPS_MM -= 60;GPS_HH++;};                                /* maintening minute       */                   
+         if(GPS_HH > 23)GPS_HH -= 24;                                             /* maintening hour         */
          if(Clock_Mode == MASTER)
          {
-           MST_MM = Read_RTC(RTC_MM_REG);                                        /* Reading minute from external RTC */
-           MST_HH = Read_RTC(RTC_HH_REG);                                        /* Reading hour from external RTC   */
-           MST_SS = Read_RTC(RTC_SS_REG);
+           MST_MM = Read_RTC(RTC_MM_REG);                                       /* Reading minute from external RTC */
+           MST_HH = Read_RTC(RTC_HH_REG);                                       /* Reading hour from external RTC   */
+           MST_SS = Read_RTC(RTC_SS_REG);                                       /* Reading Second from external RTC   */
            
            /* Checking if gps time and external rtc time doesn't match then programming external clock */
            if(GPS_HH != MST_HH || GPS_MM != MST_MM)
@@ -497,10 +494,10 @@ void Get_Config(void)
      uint64_t FlashAddress = 0,FlashData = 0;
     /****** FLASH READING *****************************************************/
     FlashAddress = ADDR_FLASH_PAGE_15; 
-    FlashData = (*(uint64_t*) FlashAddress);                      // VERIFY FLASH DATA 
+    FlashData = (*(uint64_t*) FlashAddress);                                    // VERIFY FLASH DATA 
    
     FlashData =  (FlashData >> 24) & 0xff;
-    if(FlashData == 0xED)                                                     // Signature Byte
+    if(FlashData == 0xED)                                                       // Signature Byte
     { 
       FlashData =(*(uint64_t*) FlashAddress);FlashAddress += 8; 
       DutyCycle = (FlashData >> 16) & 0xff;
@@ -608,8 +605,11 @@ void KeyPad_Functionality(void)
     /* Sensing button input */
     if(Flag_Keyscan)
     {
-        Flag_Keyscan = RESET;
-        Key_Entry = Key_Scan();
+      Flag_Keyscan = RESET;
+      Key.RST = 0; Key.KeyStatus = 0;
+      Key_Entry = Key_Scan();
+       
+        
         
         /* If a key is detected, call the Key_Function to handle the keypress */
         if(Key_Entry)Key_Function();
@@ -686,18 +686,21 @@ void KeyPad_Functionality(void)
                     }
                     
                     /* Handle 12/24 hour display logic */
-                    if(Flag_1224 == SET && MST_HH > 12)
-                        DISP_HH = MST_HH - 12;  // Adjust for 12-hour format
+                    if(Flag_1224 == SET && MST_HH > 12)                         //If 12/24 is pressed then convert 24 -> 12 Format
+                        DISP_HH = MST_HH - 12;                                  // Adjust for 12-hour format
                     else 
                         DISP_HH = MST_HH;
                     
                     /* Update display RAM with the current hour and minute */
-                    Display_RAM[0] = DISP_HH / 10;
-                    Display_RAM[1] = DISP_HH % 10;
-                    Display_RAM[2] = MST_MM  / 10;
-                    Display_RAM[3] = MST_MM  % 10;
-                    Display_RAM[4] = MST_SS  / 10;
-                    Display_RAM[5] = MST_SS  % 10;
+                    
+                    Display_RAM[0] = DISP_HH / 10;                              //Display the HH - TENS
+                    Display_RAM[1] = DISP_HH % 10;                              //Display the HH - Ones
+                    
+                    Display_RAM[2] = MST_MM  / 10;                              //Display the MM - TENS
+                    Display_RAM[3] = MST_MM  % 10;                              //Display the MM  Ones
+                    
+                    Display_RAM[4] = MST_SS  / 10;                              //Display the SS - TENS
+                    Display_RAM[5] = MST_SS  % 10;                              //Display the SS - Ones
                     
                     Old_SS = MST_SS;
                     
@@ -724,9 +727,9 @@ void KeyPad_Functionality(void)
                     ModeCounter = 0;
                     LED_Color = RED_STB;
                     
-                    SLV_SS = (RTC_Count % 3600) % 60;
-                    SLV_MM = (RTC_Count % 3600) / 60;
-                    SLV_HH = RTC_Count / 3600;
+                    SLV_SS = (RTC_Count % 3600) % 60;                           //Set value the Internal RTC Second
+                    SLV_MM = (RTC_Count % 3600) / 60;                           //Set value the Internal RTC Minutes
+                    SLV_HH = RTC_Count / 3600;                                  //Set value the Internal RTC Hour 
                     
                     /* Adjust 12/24 hour mode based on communication and self settings */
                     if(Flag_Communication)
@@ -813,7 +816,7 @@ void Scan_Display(void)
     Flag_SegUpdate = RESET;                                                     /* Reset the segment update flag */
     
     /* Prepare the data for the next digit */
-    DisplayData = BitMap_DATA[Display_RAM[NextDigit]];
+    DisplayData = BitMap_DATA[Display_RAM[NextDigit]];                          //Taking the data to display Selected Bitmap
     
     /* Toggle Dot */
     if(Flag_TGL){DisplayData = DisplayData ^ (1 << 1);DisplayData = DisplayData ^ (1 << 2);}

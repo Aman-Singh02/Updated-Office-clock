@@ -127,33 +127,14 @@ void PendSV_Handler(void)
   */
 void SysTick_Handler(void)
 {
- if(Key_ScanTime)Key_ScanTime--;
-  else
-  {
-    Key_ScanTime = 200; 
-    Flag_Keyscan = SET;
-    Key.RST = 0; Key.KeyStatus = 0;
-  }
   
-  /* increase toggle count */
-  Toggle_Counter++;
-  
-  /* Checking the Toggle Count*/
-  if(Toggle_Counter > 500)
-  {
-    
-    Toggle_Counter = 0;
-    
-    /* Toggle Flag*/
-    Flag_TGL ^= 1;
-  }
-
+  if((Tick % 200)==0)Flag_Keyscan = SET;
+  if((Tick % 500)==0)Flag_TGL    ^= 1  ;                                        
   /* Scan Time */
   if(Scan_Time)Scan_Time--;
   else
     {
       Scan_Time = 499;
-      
       if(Flag_Toggle == SET)Flag_Toggle = RESET;
       else Flag_Toggle = SET;
 
@@ -162,21 +143,21 @@ void SysTick_Handler(void)
       {
       switch(LED_Color)
        {
-        case RED_BLK    : SET_RED;
+        case RED_BLK    : SET_RED;                                              //Led blinking when GPS of the device not fixed
                           if(Flag_Toggle == SET){RST_GRN;}
                           else SET_GRN;
                           break;
         case RED_STB    : SET_RED;RST_GRN;
                           break;				
         case GREEN_BLK  : SET_GRN;
-                          if(Flag_Toggle == SET){RST_RED;} else SET_RED;
+                          if(Flag_Toggle == SET){RST_RED;} else SET_RED;        //Green blinking when GPS of the device fixed
                           break;
         case GREEN_STB :  SET_GRN;RST_RED;
                           break;
                   
        };
       };
-    };
+    }
     
   Flag_mTick = SET;
  

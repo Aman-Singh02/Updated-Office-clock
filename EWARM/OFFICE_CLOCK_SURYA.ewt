@@ -1493,6 +1493,9 @@
                     <name>$PROJ_DIR$\..\Core\Src\Misc_Functions.c</name>
                 </file>
                 <file>
+                    <name>$PROJ_DIR$\..\Core\Src\README.txt</name>
+                </file>
+                <file>
                     <name>$PROJ_DIR$\..\Core\Src\rtc.c</name>
                 </file>
                 <file>

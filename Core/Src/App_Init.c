@@ -1,7 +1,7 @@
 /******************** (C) COPYRIGHT 2008 DAN ELECTRONICS ********************
 * File Name          : App_init.c
-* Author             :
-* Date               : 15/04/2009
+* Author             : Aman Singh
+* Date               : 26/09/2024
 * Description        : This file provides all Application Initialization func.
 *****************************************************************************/
 #include "main.h"
@@ -15,7 +15,7 @@ Get_Config();
   {
    SegMult = 0x0001;
 
-   DisplayData = BitMap_DATA[Display_RAM[NextDigit]];
+   DisplayData = BitMap_DATA[Display_RAM[NextDigit]];                           //Taking the data to display Selected Bitmap
 
    for(GP_Counter = 0;GP_Counter < 16; GP_Counter++)
       {
@@ -49,7 +49,7 @@ Get_Config();
       DigitCount++;								// Increment Counter
       if(DigitCount >= 3){DigitCount = 0;Flag_CheckTime = SET;};		// if all digits scaned reset
 
-  }; // For Address display at Startup
+  };                                                                            // For Address display at Startup
     
   ModeCounter = 0;
   Clock_Mode = MASTER;
